@@ -1,0 +1,8 @@
+{
+  "buildCommand": "pnpm install && pnpm run build",
+  "outputDirectory": ".next",
+  "devCommand": "pnpm run dev",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "regions": ["hkg1"]
+}
