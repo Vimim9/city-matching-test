@@ -11,7 +11,13 @@
 - **响应式设计** - 完美支持桌面和移动设备
 - **现代化 UI** - 使用 shadcn/ui 组件库
 
-## 🚀 快速开始
+## 🚀 在线访问
+
+**GitHub 仓库**：https://github.com/Vimim9/city-matching-test
+
+---
+
+## 📦 本地开发
 
 ### 前置要求
 
@@ -22,8 +28,8 @@
 
 ```bash
 # 克隆项目
-git clone <repository-url>
-cd projects
+git clone https://github.com/Vimim9/city-matching-test.git
+cd city-matching-test
 
 # 安装依赖
 pnpm install
@@ -34,35 +40,28 @@ pnpm dev
 # 访问 http://localhost:5000
 ```
 
-### 生产构建
+---
 
-```bash
-# 构建项目
-pnpm build
+## 🌐 部署指南
 
-# 启动生产服务器
-pnpm start
-```
+### Vercel 部署（推荐）
 
-## 📦 部署
+**快速部署（5 分钟）**：查看 [VERCEL_QUICK_START.md](./VERCEL_QUICK_START.md)
 
-### 部署到 Vercel（推荐）
+**详细指南**：查看 [VERCEL_DEPLOY_GUIDE.md](./VERCEL_DEPLOY_GUIDE.md)
 
+**快速步骤**：
 1. 访问 https://vercel.com
-2. 创建账号并登录
-3. 导入项目仓库
+2. 使用 GitHub 账号登录
+3. 导入 `city-matching-test` 仓库
 4. 点击 Deploy
-5. 等待部署完成
+5. 完成！获得免费 HTTPS 域名
 
-详细部署指南请查看 [DEPLOY.md](./DEPLOY.md)
+**部署后访问**：`https://city-matching-test.vercel.app`
 
-### 其他平台
+---
 
-- Netlify
-- 自建服务器
-- 任何支持 Next.js 的平台
-
-## 🏗️ 项目结构
+## 📂 项目结构
 
 ```
 src/
@@ -81,6 +80,19 @@ src/
     └── utils.ts          # 工具函数
 ```
 
+---
+
+## 📚 文档
+
+- [部署指南](./DEPLOY.md) - 完整的部署步骤
+- [项目结构](./PROJECT_STRUCTURE.md) - 项目架构说明
+- [快速开始](./QUICK_START.md) - 快速上手指南
+- [GitHub 推送指南](./GITHUB_PUSH_GUIDE.md) - Git 操作详细说明
+- [Vercel 部署指南](./VERCEL_DEPLOY_GUIDE.md) - Vercel 部署详细步骤
+- [图片访问指南](./IMAGE_ACCESS_GUIDE.md) - 图片资源访问方式
+
+---
+
 ## 🧮 算法说明
 
 ### 评分算法
@@ -98,6 +110,8 @@ src/
 匹配度 = (最大差异 - 实际差异) / 最大差异 × 100%
 ```
 
+---
+
 ## 📊 技术栈
 
 - **框架**: Next.js 16 (App Router)
@@ -105,6 +119,9 @@ src/
 - **语言**: TypeScript 5
 - **样式**: Tailwind CSS 4
 - **包管理**: pnpm
+- **部署**: Vercel
+
+---
 
 ## 🎯 核心功能
 
@@ -130,6 +147,8 @@ src/
 - 城市排行榜
 - 个性化建议
 
+---
+
 ## 🔧 自定义配置
 
 ### 修改城市数据
@@ -144,11 +163,7 @@ src/
 
 编辑 `tailwind.config.ts` 调整颜色和样式。
 
-## 📝 文档
-
-- [部署指南](./DEPLOY.md) - 完整的部署步骤
-- [项目结构](./PROJECT_STRUCTURE.md) - 项目架构说明
-- [快速开始](./QUICK_START.md) - 快速上手指南
+---
 
 ## 🐛 常见问题
 
@@ -161,9 +176,16 @@ A: 测试结果保存在浏览器 localStorage 中。
 ### Q: 支持移动端吗？
 A: 完全支持，响应式设计适配各种设备。
 
+### Q: 图片无法访问？
+A: 查看 [图片访问指南](./IMAGE_ACCESS_GUIDE.md)
+
+---
+
 ## 📄 许可证
 
 MIT License
+
+---
 
 ## 🤝 贡献
 
@@ -172,3 +194,5 @@ MIT License
 ---
 
 **找到属于你的城市灵魂** 🏙️✨
+
+**在线演示**：[city-matching-test.vercel.app](https://city-matching-test.vercel.app) （部署后可用）
