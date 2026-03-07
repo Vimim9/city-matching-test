@@ -122,15 +122,15 @@ export default function ResultPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950 py-8">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* 头部 */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm mb-4">
             <CheckCircle2 className="w-4 h-4" />
             <span>测试完成</span>
           </div>
-          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-2 text-gray-800 dark:text-gray-100">
             你的性格城市匹配结果
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-gray-600 dark:text-gray-400">
             基于45道专业题目的深度分析
           </p>
         </div>
