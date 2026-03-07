@@ -780,31 +780,6 @@ export default function ResultPage() {
               </CardContent>
             </Card>
 
-            {/* 个性化建议 */}
-            <Card className="shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-blue-600" />
-                  基于你性格特点的个性化建议
-                </CardTitle>
-                <CardDescription>
-                  结合你的性格分析和{recommendedCity.name}的城市特色，为你量身定制
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {result.lifestyleAdvice.map((advice: string, index: number) => (
-                    <Alert key={index} className="border-blue-200 dark:border-blue-800 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
-                      <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                      <AlertDescription className="text-base leading-relaxed">
-                        {advice}
-                      </AlertDescription>
-                    </Alert>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
             {/* 城市专项建议 */}
             <Card className="shadow-md">
               <CardHeader>
