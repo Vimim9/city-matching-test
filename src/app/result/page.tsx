@@ -11,7 +11,6 @@ import { calculateTestResult, calculatePersonalityScores } from '@/lib/scoring';
 import { TestResult, PersonalityDimension, City } from '@/lib/types';
 import { cities } from '@/data/cities';
 import { MapPin, Heart, Target, Users, Palette, Brain, Sparkles, ArrowRight, CheckCircle2, AlertCircle, TrendingUp, DollarSign, Building, Clock, Coffee, Briefcase, GraduationCap, Home, Activity, Star, Lightbulb, Compass, Award } from 'lucide-react';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export default function ResultPage() {
   const router = useRouter();
@@ -183,17 +182,17 @@ export default function ResultPage() {
                 </div>
 
                 {/* 匹配度深度解读 */}
-                <Alert className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border-blue-200 dark:border-blue-800">
-                  <div className="flex items-start gap-3">
+                <div className="mb-6 p-5 rounded-lg bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800">
+                  <div className="flex gap-3">
                     <Lightbulb className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <div>
+                    <div className="flex-1">
                       <h4 className="font-semibold mb-2 text-blue-700 dark:text-blue-300">匹配度深度解读</h4>
-                      <AlertDescription className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                      <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300 whitespace-normal">
                         {result.cityMatch.reason}
-                      </AlertDescription>
+                      </p>
                     </div>
                   </div>
-                </Alert>
+                </div>
 
                 {/* 核心特征对比 */}
                 <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-5 mb-6">
@@ -913,12 +912,12 @@ export default function ResultPage() {
               <CardContent>
                 <div className="space-y-3">
                   {recommendedCity.recommendations.map((rec: string, index: number) => (
-                    <Alert key={index} className="border-green-200 dark:border-green-800 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20">
-                      <Star className="h-4 w-4 text-green-600 flex-shrink-0" />
-                      <AlertDescription className="text-sm leading-relaxed">
+                    <div key={index} className="flex gap-3 p-4 rounded-lg bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800">
+                      <Star className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300 whitespace-normal">
                         {rec}
-                      </AlertDescription>
-                    </Alert>
+                      </p>
+                    </div>
                   ))}
                 </div>
               </CardContent>
