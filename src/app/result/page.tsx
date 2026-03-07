@@ -146,36 +146,26 @@ export default function ResultPage() {
           <TabsContent value="city" className="space-y-6">
             {/* 推荐城市卡片 */}
             <Card className="border-2 border-blue-200 dark:border-blue-800 overflow-hidden shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
-                      <Award className="w-9 h-9" />
+              <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-3xl font-bold mb-1">
-                        {recommendedCity.name}
-                      </CardTitle>
-                      <div className="text-sm text-blue-100">
-                        {recommendedCity.province}
-                      </div>
+                      <h2 className="text-2xl font-bold">{recommendedCity.name}</h2>
+                      <p className="text-sm text-blue-100">{recommendedCity.province}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-6 md:text-right">
-                    <div className="text-center md:text-right">
-                      <div className="text-5xl font-bold">
-                        {result.cityMatch.matchScore}%
-                      </div>
-                      <div className="text-sm text-blue-100 mt-1">综合匹配度</div>
-                    </div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="text-4xl font-bold">{result.cityMatch.matchScore}%</div>
+                    <p className="text-sm text-blue-100">匹配度</p>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-white/20">
-                  <p className="text-blue-100 leading-relaxed">
-                    {recommendedCity.description}
-                  </p>
-                </div>
-              </CardHeader>
+                <p className="mt-4 text-blue-100 text-sm leading-relaxed">
+                  {recommendedCity.description}
+                </p>
+              </div>
               <CardContent className="pt-6">
                 {/* 标签 */}
                 <div className="flex flex-wrap gap-2 mb-6">
