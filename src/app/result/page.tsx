@@ -382,60 +382,6 @@ export default function ResultPage() {
 
           {/* 性格分析标签页 */}
           <TabsContent value="personality" className="space-y-6">
-            {/* 性格画像总结 */}
-            <Card className="border-2 border-indigo-200 dark:border-indigo-800 shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
-                <CardTitle className="text-2xl flex items-center gap-2">
-                  <Brain className="w-6 h-6" />
-                  你的性格画像
-                </CardTitle>
-                <CardDescription className="text-indigo-100">
-                  基于45道专业题目的深度分析结果
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="space-y-6">
-                  {personalityResults.map((item: any, index: number) => (
-                    <div key={index} className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-5">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r ${dimensionColors[item.dimension]} text-white flex-shrink-0 shadow-md`}>
-                          {dimensionIcons[item.dimension]}
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="text-xl font-bold text-gray-800 dark:text-gray-200">
-                              {dimensionNames[item.dimension]}
-                            </h4>
-                            <div className="flex items-center gap-2">
-                              <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div
-                                  className={`bg-gradient-to-r ${dimensionColors[item.dimension]} h-3 rounded-full transition-all duration-500`}
-                                  style={{ width: `${item.score * 10}%` }}
-                                />
-                              </div>
-                              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                                {item.score}/10
-                              </span>
-                            </div>
-                          </div>
-                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
-                            {item.description}
-                          </p>
-                          <div className="flex flex-wrap gap-2">
-                            {item.keywords.map((keyword: string, kIndex: number) => (
-                              <Badge key={kIndex} variant="secondary" className="text-xs bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300">
-                                {keyword}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
             {/* 性格维度对比分析 */}
             <Card className="shadow-md">
               <CardHeader>
