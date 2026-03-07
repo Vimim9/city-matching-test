@@ -163,7 +163,7 @@ export default function Home() {
       {/* 页脚 */}
       <footer className="border-t bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm mt-16">
         <div className="container mx-auto px-4 py-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 性格城市匹配测试. 帮助你找到理想的城市生活.</p>
+          <p>© 性格城市匹配测试. 帮助你找到理想的城市生活.</p>
         </div>
       </footer>
     </div>

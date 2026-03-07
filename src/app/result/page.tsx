@@ -972,7 +972,7 @@ export default function ResultPage() {
         {/* 页脚 */}
         <div className="text-center mt-12 text-sm text-muted-foreground">
           <p>测试结果仅供参考，请结合实际情况做出决策</p>
-          <p className="mt-2">© 2024 性格城市匹配测试</p>
+          <p className="mt-2">© 性格城市匹配测试</p>
         </div>
       </div>
     </div>
